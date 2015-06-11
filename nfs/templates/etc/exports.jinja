@@ -1,0 +1,5 @@
+#managed by salt
+{% for export, exportdata in nfs.exports.items()|sort -%}
+{{export}}{% for hostsandopt in exportdata.hostsandopts|sort %} {{ hostsandopt}} {%- endfor %}
+
+{% endfor -%}

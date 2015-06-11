@@ -1,0 +1,12 @@
+{% set nfs = salt['grains.filter_by']({
+  'Debian': {
+    'nfsserverpackages': [ 'nfs-kernel-server', ],
+  },
+  'RedHat': {
+    'nfsserverpackages': [ 'nfs-utils', ],
+    'nfsclientpackages': [ 'nfs-utils', ],
+  },
+  'default': {
+    'nfsserverpackages': [ 'nfs-utils', ],
+  },
+}, merge=salt['pillar.get']('nfs:lookup')) %}

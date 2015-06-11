@@ -1,0 +1,8 @@
+# cat /etc/exports:
+#managed by salt
+/srv/export/a hosta(rw,sync,no_subtree_check,no_root_squash) hostb(rw,sync,no_subtree_check,no_root_squash)
+/srv/export/b hosta(rw,sync,no_subtree_check,no_root_squash) hostb(rw,sync,no_subtree_check,no_root_squash) hostc(rw,sync,no_subtree_check,no_root_squash)
+/srv/export/c hosta(rw,sync,no_subtree_check,no_root_squash)
+/srv/export/d hosta(rw,sync,no_subtree_check,no_root_squash) hostb(rw,sync,no_subtree_check,no_root_squash) hostc(rw,sync,no_subtree_check,no_root_squash)
+/srv/export/e hosta(rw,sync,no_subtree_check,no_root_squash)
+

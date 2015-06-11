@@ -1,0 +1,23 @@
+nfs:
+  lookup:
+    exports:
+      /srv/export/a:
+        hostsandopts: 
+          - "hosta(rw,sync,no_subtree_check,no_root_squash)"
+          - "hostb(rw,sync,no_subtree_check,no_root_squash)"
+      /srv/export/b:
+        hostsandopts: 
+          - "hosta(rw,sync,no_subtree_check,no_root_squash)"
+          - "hostb(rw,sync,no_subtree_check,no_root_squash)"
+          - "hostc(rw,sync,no_subtree_check,no_root_squash)"
+      /srv/export/c:
+        hostsandopts: 
+          - "hosta(rw,sync,no_subtree_check,no_root_squash)"
+      /srv/export/d:
+        hostsandopts: 
+          - "hosta(rw,sync,no_subtree_check,no_root_squash)"
+          - "hostb(rw,sync,no_subtree_check,no_root_squash)"
+          - "hostc(rw,sync,no_subtree_check,no_root_squash)"
+      /srv/export/e:
+        hostsandopts: 
+          - "hosta(rw,sync,no_subtree_check,no_root_squash)"
