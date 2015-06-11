@@ -16,10 +16,11 @@ with the pillar data.
 
 
 
-###Remarks(WIP):
+### Remarks(WIP):
 
 Against all internet howtos, configuring nfs on CentOS 7.1 is easy.
-There is no need to !enable! nfs or rpcbind or nfs-server (systemd)-service
+There is no need to !enable! nfs or rpcbind or nfs-server (systemd)-service.
+
 It must be !started! only direct after installation without reboot.
 
 What's the difference?
