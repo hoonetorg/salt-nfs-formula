@@ -19,9 +19,9 @@ nfs_client__service_rpcbind:
     - require:
       - pkg: nfs_client__pkg_nfsclient
 
-nfs_client__service_nfs:
-  service.running:
-    - name: nfs
-    - require:
-      - pkg: nfs_client__pkg_nfsclient
-      - service: nfs_client__service_rpcbind
+#nfs_client__service_rpc-statd:
+#  service.running:
+#    - name: rpc-statd
+#    - require:
+#      - pkg: nfs_client__pkg_nfsclient
+#      - service: nfs_client__service_rpcbind

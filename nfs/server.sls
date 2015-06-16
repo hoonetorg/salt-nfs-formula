@@ -39,7 +39,8 @@ nfs_server__service_rpcbind:
 
 nfs_server__service_nfs:
   service.running:
-    - name: nfs
+    - name: nfs-server
+    - enable: true
     - require:
       - pkg: nfs_server__pkg_nfsserver
       - service: nfs_server__service_rpcbind
