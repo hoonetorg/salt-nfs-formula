@@ -4,10 +4,9 @@
 nfs_server__pkg_nfsserver:
   pkg.installed:
     - name: nfsserver
-{% set slsrequires =salt['pillar.get']('nfs:slsrequires', False) %}
-{% if slsrequires is defined and slsrequires %}
+{% if nfs.server is defined and nfs.server.slsrequires is defined and nfs.server.slsrequires %}
     - require:
-{% for slsrequire in slsrequires %}
+{% for slsrequire in nfs.server.slsrequires %}
       - {{slsrequire}}
 {% endfor %}
 {% endif %}

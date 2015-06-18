@@ -4,10 +4,9 @@
 nfs_client__pkg_nfsclient:
   pkg.installed:
     - name: nfsclient
-{% set slsrequires =salt['pillar.get']('nfs:slsrequires', False) %}
-{% if slsrequires is defined and slsrequires %}
+{% if nfs.client is defined and nfs.client.slsrequires is defined and nfs.client.slsrequires %}
     - require:
-{% for slsrequire in slsrequires %}
+{% for slsrequire in nfs.client.slsrequires %}
       - {{slsrequire}}
 {% endfor %}
 {% endif %}
